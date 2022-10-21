@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class Cat(models.Model):
-    cat_breed = models.CharField('Katės veislė', max_length=200, help_text='Pasirinkite katės veislę', default='Mišri')
+    cat_breed = models.CharField('Katės veislė', max_length=200, help_text='Pasirinkite katės veislę')
 
     def __str__(self):
         return self.cat_breed
@@ -32,7 +32,7 @@ class Animal(models.Model):
                               help_text='Pasirinkite gyvūno rūšį')
 
     cat_breed = models.ForeignKey(Cat, on_delete=models.CASCADE, null=True, blank=True,
-                                  help_text='Pasirinkite katės veislę', default='Mišri')
+                                  help_text='Pasirinkite katės veislę')
     dog_breed = models.ForeignKey(Dog, on_delete=models.CASCADE, null=True, blank=True,
                                   help_text='Pasirinkite šuns veislę')
 
