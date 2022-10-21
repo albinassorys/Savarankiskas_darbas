@@ -1,4 +1,7 @@
+from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Animal, Cat, Dog
 
-def index(request):
-    return HttpResponse("Labas, pasauli!")
+
+def main(request):
+    return render(request, 'main.html')
