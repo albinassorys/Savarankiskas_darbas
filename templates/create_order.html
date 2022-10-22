@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post" action="{% url 'create_order' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if form.animal.errors %}
+    {{ form.animal.errors }}
+    {% endif %}
+    <table>
+        <tr>
+            <td>Gyvūno rūšis:</td>
+            <td>{{ form.animal.type }}</td>
+        </tr>
+        <tr>
+            <td>Atvaizdas:</td>
+            <td>{{ form.image }}</td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit"/>
+</form>
+
+{% endblock %}

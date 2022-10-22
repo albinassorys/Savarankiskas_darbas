@@ -43,7 +43,7 @@ class Animal(models.Model):
     )
     status = models.CharField('Būsena', max_length=1, choices=STATUS_TYPE, default='0', help_text='Pasirinkite gyvūno būseną')
     image = models.ImageField('Atvaizdas', null=True, help_text='Įkelkite gyvūno atvaizdą')
-    date = models.DateField('Data', null=True, help_text='Nurodykite radimo / dingimo datą', auto_now_add=True)
+    date = models.DateField('Data', null=True, help_text='Nurodykite radimo / dingimo datą', editable=True)
 
     def __str__(self):
         return f'{self.get_type_display()} {self.name}'
