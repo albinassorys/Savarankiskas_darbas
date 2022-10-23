@@ -1,0 +1,121 @@
+body {
+    overflow-y: scroll
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+nav {display: flex; flex-wrap: nowrap; justify-content: space-between; flex-direction: row;
+    background-color: rgb(134, 176, 199);
+    position: fixed;
+    top: 0;
+    width: 100%;}
+
+    /* border-bottom: 1rem solid azure; */
+
+.nav-link {font-family: Arial, Helvetica, sans-serif;}
+
+.nav-link:link, .nav-link:visited {
+    background-color: rgb(134, 176, 199);
+    color: azure;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+  
+.nav-link:hover, .nav-link:active {
+    background-color: azure;
+    color: rgb(109, 140, 156);
+  }
+
+a:link, a:visited {
+    text-decoration: none;
+    color: azure;
+    }
+
+a:hover, a:active {
+    color: red;
+}
+
+.prisijunk {font-family: Arial, Helvetica, sans-serif; border-left: 3px solid azure;}
+
+.prisijunk:link, .prisijunk:visited {
+    background-color: rgb(134, 176, 199);
+    color: azure;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+
+.prisijunk:hover, .prisijunk:active {
+    background-color: azure;
+    color: rgb(109, 140, 156);
+  }
+
+.signup-link:link, .signup-link:visited {
+    text-decoration: none;
+    color: rgb(134, 176, 199);
+    }
+
+.signup-link:hover, .signup-link:active {
+    color: red;
+}
+
+.signup-form {margin: 5rem auto; width: 70%;}
+
+h3 {font-family: Arial, Helvetica, sans-serif; color: rgb(134, 176, 199)}
+
+main {margin: 0 auto; width: 70%;}
+
+img {width: 290px; height: 200px; border-top-left-radius: 10px; border-top-right-radius: 10px; object-fit: cover}
+
+.card_row {display: flex; margin: 4rem 1rem 0 1rem; flex-wrap: wrap; justify-content: center;}
+
+.card {width: 290px; height: 370px; border-radius: 10px; margin: 0px 1rem 1rem 0rem; background-color: rgb(134, 176, 199); text-align: center; color: white; font-family: Arial, Helvetica, sans-serif;}
+
+.card_details {width: 290px; height: auto; border-radius: 10px; margin: 0px 1rem 1rem 0rem; background-color: rgb(134, 176, 199); text-align: center; color: white; font-family: Arial, Helvetica, sans-serif; text-align: center}
+
+.table_details {padding: 1rem 2rem 1rem 2rem}
+
+.table_details td {text-align: left}
+
+.details_data {text-align: right}
+
+.messages {margin: 0 auto; width: 70%; font-family: Arial, Helvetica, sans-serif; color: rgb(134, 176, 199); text-align: center}
+
+@media screen and (min-width:768px)
+
+{
+    body {
+    overflow-y: scroll
+    }
+
+    body::-webkit-scrollbar {
+    display: none;
+    }
+
+    body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    }
+
+    .card_row {display: flex; margin: 4rem 1rem 0 1rem; flex-wrap: wrap; justify-content: center;}
+
+    span {padding: 14px 25px;}
+
+    nav {display: flex; flex-wrap: nowrap; justify-content: center; flex-direction: row; overflow: hidden;
+        background-color: rgb(134, 176, 199);
+        position: fixed;
+        top: 0;
+        width: 100%}
+
+}
+

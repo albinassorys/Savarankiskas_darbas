@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="card_row">
+
+            {% for row in order_details %}
+            <div class="card_details">
+
+                <img src="/media/{{ row.image }}">
+
+                <table class="table_details">
+                <tr>
+                <td>Būsena: </td>
+                <td class="details_data">{{row.get_status_display}}</td>
+                </tr>
+                <tr>
+                <td>Data: </td>
+                <td class="details_data">{{row.date}}</td>
+                </tr>
+
+                <tr>
+                <td>Gyvūnas: </td>
+                <td class="details_data">{{row.get_type_display}}</td>
+                </tr>
+
+                <tr>
+                <td>Veislė: </td>
+                <td class="details_data">{{row.breed}}</td>
+                </tr>
+                <tr>
+                <td>Vardas: </td>
+                <td class="details_data">{{row.name}}</td>
+                </tr>
+                </table>
+
+                </div>
+            {% endfor %}
+
+</div>
+{% endblock %}

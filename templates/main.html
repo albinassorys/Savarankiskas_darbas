@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="card_row">
+
+            {% for animal in animals %}
+            <div class="card">
+
+                <img src="/media/{{ animal.image }}">
+                <H2>{{animal.get_status_display}}</H2>
+                <p>{{animal.get_type_display}}</p>
+                <p>{{animal.name}}</p>
+                <p><a href="{% url 'order_detail' id=animal.id %}">Išsamiau</a>
+
+            </div>
+            {% endfor %}
+
+</div>
+
+
+{% endblock %}

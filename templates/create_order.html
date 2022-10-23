@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="signup-form">
+<h3>Skelbimas</h3><br/>
+
+<form method="post" action="{% url 'create_order' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if form.animal.errors %}
+    {{ form.animal.errors }}
+    {% endif %}
+    <table>
+
+        <tr>
+            <td>Dingo ar radai?</td>
+            <td>{{ form.status }}</td>
+        </tr>
+
+        <tr>
+            <td>Gyvūno rūšis:</td>
+            <td>{{ form.type }}</td>
+        </tr>
+        <tr>
+
+            <td>Veislė:</td>
+
+            <td>{{ form.breed }}</td>
+
+        </tr>
+
+        <tr>
+            <td>Vardas:</td>
+            <td>{{ form.name }}</td>
+        </tr>
+
+        <tr>
+            <td>Data:</td>
+            <td>{{ form.date }}</td>
+        </tr>
+        <tr>
+            <td>Atvaizdas:</td>
+            <td>{{ form.image }}</td>
+        </tr>
+    </table><br>
+    <input type="submit" value="Submit"/>
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
+</div>
+
+{% endblock %}
