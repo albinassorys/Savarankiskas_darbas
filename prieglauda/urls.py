@@ -7,6 +7,6 @@ urlpatterns = [
     path('dingo/', dingo, name='dingo'),
     path('registration/sign_up', sign_up, name='sign_up'),
     path('create_order/', create_order, name='create_order'),
-    path('order<int:id>/', order_detail, name='order_detail')]
+    path('order_detail<int:id>/', order_detail, name='order_detail')]
 
 

@@ -35,6 +35,14 @@ nav {display: flex; flex-wrap: nowrap; justify-content: space-between; flex-dire
     color: rgb(109, 140, 156);
   }
 
+a:link, a:visited {
+    text-decoration: none;
+    color: azure;
+    }
+
+a:hover, a:active {
+    color: red;
+}
 
 .prisijunk {font-family: Arial, Helvetica, sans-serif; border-left: 3px solid azure;}
 
@@ -52,17 +60,34 @@ nav {display: flex; flex-wrap: nowrap; justify-content: space-between; flex-dire
     color: rgb(109, 140, 156);
   }
 
+.signup-link:link, .signup-link:visited {
+    text-decoration: none;
+    color: rgb(134, 176, 199);
+    }
+
+.signup-link:hover, .signup-link:active {
+    color: red;
+}
+
 .signup-form {margin: 5rem auto; width: 70%;}
 
 h3 {font-family: Arial, Helvetica, sans-serif; color: rgb(134, 176, 199)}
 
 main {margin: 0 auto; width: 70%;}
 
-img {width: 290px; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+img {width: 290; height: 180px; border-top-left-radius: 10px; border-top-right-radius: 10px; object-fit: contain}
 
 .card_row {display: flex; margin: 4rem 1rem 0 1rem; flex-wrap: wrap; justify-content: center;}
 
 .card {width: 290px; height: 370px; border-radius: 10px; margin: 0px 1rem 1rem 0rem; background-color: rgb(134, 176, 199); text-align: center; color: white; font-family: Arial, Helvetica, sans-serif;}
+
+.card_details {width: 290px; height: auto; border-radius: 10px; margin: 0px 1rem 1rem 0rem; background-color: rgb(134, 176, 199); text-align: center; color: white; font-family: Arial, Helvetica, sans-serif; text-align: center}
+
+.table_details {padding: 1rem 2rem 1rem 2rem}
+
+.table_details td {text-align: left}
+
+.details_data {text-align: right}
 
 @media screen and (min-width:768px)
 
