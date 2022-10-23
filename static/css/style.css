@@ -1,6 +1,17 @@
-body {background-color: azure;}
+body {
+    overflow-y: scroll
+}
 
-nav {display: flex; flex-wrap: nowrap; justify-content: space-between; flex-direction: row; overflow: hidden;
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+nav {display: flex; flex-wrap: nowrap; justify-content: space-between; flex-direction: row;
     background-color: rgb(134, 176, 199);
     position: fixed;
     top: 0;
@@ -8,9 +19,9 @@ nav {display: flex; flex-wrap: nowrap; justify-content: space-between; flex-dire
 
     /* border-bottom: 1rem solid azure; */
 
-a {font-family: Arial, Helvetica, sans-serif;}
+.nav-link {font-family: Arial, Helvetica, sans-serif;}
 
-a:link, a:visited {
+.nav-link:link, .nav-link:visited {
     background-color: rgb(134, 176, 199);
     color: azure;
     padding: 14px 25px;
@@ -19,17 +30,31 @@ a:link, a:visited {
     display: inline-block;
     }
   
-  a:hover, a:active {
+.nav-link:hover, .nav-link:active {
     background-color: azure;
     color: rgb(109, 140, 156);
   }
 
-.prisijunk {border-left: 3px solid azure;}
 
-/* .filter_bar {height: 50px; background-color: rgb(134, 176, 199);
-    position: fixed;
-    top: 150;
-    width: 100%} */
+.prisijunk {font-family: Arial, Helvetica, sans-serif; border-left: 3px solid azure;}
+
+.prisijunk:link, .prisijunk:visited {
+    background-color: rgb(134, 176, 199);
+    color: azure;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+
+.prisijunk:hover, .prisijunk:active {
+    background-color: azure;
+    color: rgb(109, 140, 156);
+  }
+
+.signup-form {margin: 5rem auto; width: 70%;}
+
+h3 {font-family: Arial, Helvetica, sans-serif; color: rgb(134, 176, 199)}
 
 main {margin: 0 auto; width: 70%;}
 
@@ -39,10 +64,24 @@ img {width: 290px; height: auto; border-top-left-radius: 10px; border-top-right-
 
 .card {width: 290px; height: 370px; border-radius: 10px; margin: 0px 1rem 1rem 0rem; background-color: rgb(134, 176, 199); text-align: center; color: white; font-family: Arial, Helvetica, sans-serif;}
 
-@media screen and (min-width:768px) 
+@media screen and (min-width:768px)
 
 {
-    
+    body {
+    overflow-y: scroll
+    }
+
+    body::-webkit-scrollbar {
+    display: none;
+    }
+
+    body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    }
+
+    .card_row {display: flex; margin: 4rem 1rem 0 1rem; flex-wrap: wrap; justify-content: center;}
+
     span {padding: 14px 25px;}
 
     nav {display: flex; flex-wrap: nowrap; justify-content: center; flex-direction: row; overflow: hidden;

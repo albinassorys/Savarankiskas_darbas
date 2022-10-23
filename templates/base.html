@@ -13,26 +13,30 @@
 
     <nav>
 
-        <a href="{% url 'main' %}">PRADŽIA</a>
+        <a href="{% url 'main' %}" class="nav-link">PRADŽIA</a>
 
+        {% if user.is_authenticated %}
 
+        <a href="{% url 'create_order' %}" class="nav-link">SKELBTI</a>
 
-        <a href="{% url 'rasta' %}">RASTA</a>
+        {% else %}
 
+        <a href="{% url 'rasta' %}" class="nav-link">RASTA</a>
 
+        <a href="{% url 'dingo' %}" class="nav-link">DINGO</a>
 
-        <a href="{% url 'dingo' %}">DINGO</a>
+        {% endif %}
 
+        {% if user.is_authenticated %}
 
-        <!-- <span></span> -->
+        <a href="{% url 'logout' %}" class="prisijunk">ATSIJUNK</a>
 
+        {% else %}
 
         <a href="{% url 'sign_up' %}" class="prisijunk">PRISIJUNK</a>
 
+        {% endif %}
     </nav>
-
-    <!-- <div class="filter_bar">
-    </div> -->
 
      <main>
         {% block content %}

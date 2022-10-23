@@ -1,30 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
+
   {% if form.errors %}
-    <p>Login failed, try again!</p>
+    <p>Prisijungimo klaida, bandykite dar kartą!</p>
   {% endif %}
-  
+
   {% if next %}
-    <p>You are not authenticated. Please login.</p>
+    <p>Paskyra nepasiekiama. Reikia prisijungti.</p>
   {% endif %}
-  
+
+
+  <div class="signup-form">
+  <h3>Prisijungimas</h3><br/>
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <table>
       <tr>
-        <td>Username: </td>
+        <td>Vartotojas: </td>
         <td>{{ form.username }}</td>
       </tr>
       <tr>
-        <td>Password: </td>
+        <td>Slaptažodis: </td>
         <td>{{ form.password }}</td>
       </tr>
-    </table>
-    <input type="submit" value="Sign In" />
+    </table><br>
+    <input type="submit" value="Prisijungti" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
-  
-  <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
-  
+  </div>
 {% endblock %}

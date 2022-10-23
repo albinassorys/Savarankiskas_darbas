@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-</body>
-</html>
+<div class="card_row">
+
+            {% for order_detail in order_details %}
+            <div class="card">
+
+                <img src="/media/{{ animal.image }}">
+                <p>{{animal.get_status_display}}</p>
+                <p>{{animal.date}}</p>
+                <p>{{animal.breed}}</p>
+                <p>{{animal.name}}</p>
+                <p>{{animal.get_type_display}}</p>
+                <p>{{animal.name}}</p>
+
+            </div>
+            {% endfor %}
+
+</div>
+{% endblock %}
