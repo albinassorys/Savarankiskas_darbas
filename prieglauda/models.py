@@ -1,16 +1,5 @@
 from django.db import models
 
-# class Breed(models.Model):
-#     animal_breed = models.TextField('Veislė', max_length=200, help_text='Pasirinkite gyvūno veislę', default='Mišri')
-#
-#     def __str__(self):
-#         return self.animal_breed
-#
-#     class Meta:
-#         verbose_name = 'Veislė'
-#         verbose_name_plural = 'Veislės'
-
-
 class Animal(models.Model):
     ANIMAL_TYPE = (
         ('1', 'Šuo'),
@@ -19,9 +8,9 @@ class Animal(models.Model):
     type = models.CharField('Rūšis', max_length=1, choices=ANIMAL_TYPE, null=False, blank=False,
                               help_text='Pasirinkite gyvūno rūšį')
 
-    breed = models.CharField('Veislė', max_length=200, help_text='Pasirinkite gyvūno veislę', editable=True)
+    breed = models.CharField('Veislė', max_length=200, help_text='Pasirinkite gyvūno veislę', editable=True, null=True, default='Mišri')
 
-    name = models.CharField('Vardas', max_length=200, null=True, help_text='Nurodykite gyvūno vardą')
+    name = models.CharField('Vardas', max_length=200, null=True, help_text='Nurodykite gyvūno vardą', default='Be vardo')
     STATUS_TYPE = (
         ('1', 'Dingo'),
         ('2', 'Rasta'),

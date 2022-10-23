@@ -43,5 +43,16 @@
         {% endblock %}
      </main>
 
+<div class="messages">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <br>
+</div>
+
 </body>
 </html>
